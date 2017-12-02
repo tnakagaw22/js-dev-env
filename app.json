@@ -1,0 +1,6 @@
+{
+  "name": "Start on Heroku: Node.js",
+  "description": "js-dev-env hosted on heroku",
+  "repository": "https://github.com/tnakagaw22/js-dev-env",
+  "keywords": ["node", "express", "heroku"]
+}
