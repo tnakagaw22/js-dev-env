@@ -3,6 +3,7 @@ import path from 'path';
 import open from 'open';
 import compression from 'compression';
 import Raven from'raven';
+import cors from 'cors';
 
 /* eslint-disable no-console */
 
@@ -18,6 +19,7 @@ Raven.config(dsn).install();
 app.use(Raven.requestHandler());
 app.use(compression());
 app.use(express.static('dist'));
+app.use(cors());
 
 app.get('/', function(req, res){
   res.sendFile(path.join(__dirname, '../dist/index.html'));
