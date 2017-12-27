@@ -6,7 +6,7 @@ module.exports = {
   devtool: 'inline-source-map',
   noInfo: false,
   entry: [
-    path.resolve(__dirname, 'src/index')
+    path.resolve(__dirname, 'src/main')
   ],
   target: 'web',
   output: {
