@@ -1,7 +1,7 @@
-import path from 'path';
-import HtmlWebpackPlugin from 'html-webpack-plugin';
+var path = require('path');
+var HtmlWebpackPlugin = require('html-webpack-plugin');
 
-export default {
+module.exports = {
   debug: true,
   devtool: 'inline-source-map',
   noInfo: false,
@@ -24,7 +24,16 @@ export default {
   module: {
     loaders: [
       { test: /\.js$/, exclude: /node_modules/, loaders: ['babel'] },
-      { test: /\.css$/, loaders: ['style', 'css'] }
+      { test: /\.css$/, loaders: ['style', 'css'] },
+      {
+        test: /\.vue$/,
+        loader: 'vue'
+      }
     ]
+  },
+  vue: {
+    loaders: {
+      js: 'babel'
+    }
   }
 }
